@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html><head><title>Many Buttons</title></head>
+<body>
+  <div id="container"></div>
+  <script>
+    const container = document.getElementById('container');
+    for (let i = 0; i < 300; i++) {
+      const btn = document.createElement('button');
+      btn.textContent = 'Button ' + i;
+      container.appendChild(btn);
+    }
+  </script>
+</body></html>

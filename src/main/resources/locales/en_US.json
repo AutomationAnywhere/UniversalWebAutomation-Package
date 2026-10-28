@@ -1,0 +1,11 @@
+{
+	"label": "Universal Web Automation",
+	"description": "Universal Web Automation package for automating cross-platform web operations",
+	"LaunchBrowser.label": "LaunchBrowser",
+	"LaunchBrowser.description": "LaunchBrowsers window",
+	"LaunchBrowser.node_label": "{{firstString}} with {{secondString}}",
+	"LaunchBrowser.return_label": "Assign the output to variable",
+	"LaunchBrowser.url.label": "URL for Page",
+	"LaunchBrowser.headlessState.label": "Headless?",
+    "LaunchBrowser.return_label_description": "Session ID"
+}

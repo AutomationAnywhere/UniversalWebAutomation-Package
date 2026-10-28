@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html><head><title>Re-rendering form</title></head>
+<body>
+  <!-- Like a React form: changing Category rebuilds the fields below it (new DOM nodes). -->
+  <label for="cat">Category</label>
+  <select id="cat"><option>Meals</option><option>Transport</option></select>
+  <div id="rest"></div>
+  <script>
+    function render() {
+      const meals = document.getElementById('cat').value === 'Meals';
+      document.getElementById('rest').innerHTML =
+        '<div><label for="m">Merchant</label><input id="m"></div>' +
+        (meals ? '<div><label for="a">Attendees</label><input id="a"></div>' : '');
+    }
+    document.getElementById('cat').addEventListener('change', render);
+    render();
+  </script>
+</body></html>

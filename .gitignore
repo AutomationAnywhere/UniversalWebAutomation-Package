@@ -1,0 +1,25 @@
+# Ignore build artifacts
+/build/
+/out/
+/bin/
+
+# Ignore Gradle wrapper caches
+.gradle/
+**/build/
+**/out/
+
+# Ignore IntelliJ IDEA project files
+.idea/
+*.iml
+
+# Ignore macOS junk files
+.DS_Store
+
+# Ignore local secrets (API keys for local dev/testing only - never committed)
+.env
+
+# Ignore compiled jars in build/libs
+/build/libs/*.jar
+
+# If you want to be very specific, ignore just this one
+# /build/libs/UniversalWebAutomation-2.11.0.jar

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<body>
+<!-- Mimics React's input value tracking: React installs an instance-level `value`
+     setter that records the value, then ignores an 'input' event whose value equals
+     the recorded one. So `el.value = x; dispatchEvent(input)` never reaches state. -->
+<label for="title">Title</label>
+<input id="title" type="text">
+<script>
+  window.committed = null;
+  const el = document.getElementById('title');
+  const proto = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value');
+  let tracked = '';
+  Object.defineProperty(el, 'value', {
+    get() { return proto.get.call(this); },
+    set(v) { tracked = String(v); proto.set.call(this, v); }
+  });
+  el.addEventListener('input', () => {
+    if (el.value !== tracked) { tracked = el.value; window.committed = el.value; }
+  });
+</script>
+</body>
+</html>
