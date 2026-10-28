@@ -26,9 +26,7 @@ package, so they only open and run once it is present.
 After importing, the bots are in `Bot Store\UniversalWebAutomationPackage`:
 `..._mac` bots run on macOS Bot Agents and `..._windows` bots run on Windows Bot Agents.
 
-The two FSD demos also need a Credential Vault locker named `MicahsLocker` containing a
-credential `TypeSafe` (attribute `API_KEY`) and a credential `OpenAI` (attribute
-`OpenAI API Key`). If your locker is named differently, open the FSD actions in those bots
+The two FSD demos also need a credential for a `TypeSafe` API Key and a credential a `OpenAI` API Key. Open the FSD actions in those taskbots
 and re-map the two credential fields. See [docs/demo-taskbot/README.md](docs/demo-taskbot/README.md).
 
 ---
